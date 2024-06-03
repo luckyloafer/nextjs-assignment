@@ -2,8 +2,11 @@
 
 import React from "react";
 import axios from "axios";
+import { useRouter } from 'next/navigation'
+
 
 const Login = () => {
+  const router = useRouter()
 
   const signin = async () => {
     window.location.href = '/api/linkedin/authorize';
@@ -19,7 +22,7 @@ const Login = () => {
         </div>
         <hr className="w-full"/>
         <br/>
-        <button className="bg-blue-700 font-semibold px-6 py-3 text-white  rounded-md" onClick={()=>signin()}>
+        <button className="bg-blue-700 font-semibold px-6 py-3 text-white  rounded-md" onClick={() => router.push('/api/linkedin/authorize')}>
           Sign up with LinkedIn
         </button>
         <br />
