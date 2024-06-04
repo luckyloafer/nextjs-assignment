@@ -21,18 +21,34 @@ const UserPage = () => {
       const user = JSON.parse(userCookie);
       console.log(user);
       setUser(user);
-    } else {
+    } 
+    else {
       // Redirect to login page if accessToken or user cookie is missing
       router.push("/");
     }
+
+    const handleKeyDown = (event) => {
+      if (event.ctrlKey && event.key === 'k') {
+        event.preventDefault();
+        handleOpen();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   const style = {
-    position: "absolute",
+     position: "absolute",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: 800,
+    //  width: 500,
+    width: "90%",
+    maxWidth: "600px",
     bgcolor: "background.paper",
     // border: "2px solid #000",
     boxShadow: 24,
@@ -64,8 +80,9 @@ const UserPage = () => {
               onClose={handleClose}
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
+              
             >
-              <div style={style} className="bg-white rounded-md">
+              <div style={style} className=" bg-white max-w-md md:max-w-xl rounded-md  ">
                 <div className="border  rounded-md  px-5 py-4 flex gap-2 justify-between">
                   <input
                     className="font-normal outline-none w-full"

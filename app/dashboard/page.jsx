@@ -102,9 +102,9 @@ function RenderContent() {
         <h3 className="font-semibold flex gap-2 my-3  text-slate-600">
           Templates <ExternalLink size={15} />
         </h3>
-        <div className="border rounded-md bg-white p-4">
+        <div className="border rounded-md bg-white p-4 ">
           {/* search bar  */}
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center flex-col md:flex-row">
             <div className="border w-min rounded-md  px-2 py-1 flex gap-2 ">
               <input
                 className="font-semibold outline-none "
@@ -112,7 +112,7 @@ function RenderContent() {
               />
               <Search size={18} className="text-slate-500"/>
             </div>
-            <div className=" flex gap-2">
+            <div className=" flex gap-2 flex-col md:flex-row lg:flex-row items-center mt-2">
               <div className="border w-min rounded-md   px-2 py-1 flex gap-2 ">
                 <select>
                   <option>All Usecases</option>
