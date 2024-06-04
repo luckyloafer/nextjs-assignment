@@ -13,6 +13,7 @@ import {
   SquareArrowOutUpRight,
   SquareArrowUpRight,
   User2,
+  Video,
 } from "lucide-react";
 import React from "react";
 import { LabeledInput } from "../page";
@@ -39,7 +40,7 @@ function RenderContent() {
         <div className="col-span-1 p-2">
           <label className=" font-semibold text-black ">Quick create</label>
           <br />
-          <div className="border rounded-md flex flex-col justify-between bg-white shadow-sm  aspect-video p-4 ">
+          <div className="mt-2 border rounded-md flex flex-col justify-between bg-white shadow-sm  aspect-video p-4 ">
             <LabeledInput
               label={"Generate video from any URL (Ex.Amazon)"}
               placeholder={"https://www.amazon.com"}
@@ -66,7 +67,7 @@ function RenderContent() {
             Your Gallery <ExternalLink size={15} />
           </label>
 
-          <div className="border rounded-md  flex flex-col justify-center gap-2  aspect-video   bg-white shadow-sm  p-4 flex items-center flex-col  ">
+          <div className=" mt-2 border rounded-md  flex flex-col justify-center gap-2  aspect-video   bg-white shadow-sm  p-4 flex items-center flex-col  ">
             <Bird size={60} className="text-slate-400" />
             <span className="text-center text-gray-400">
               No Video at <br /> Create one today
@@ -81,7 +82,7 @@ function RenderContent() {
             Usage <ExternalLink size={15} />
           </label>
 
-          <div className="border rounded-md  aspect-video bg-white shadow-sm   flex justify-center  flex-col items-center  ">
+          <div className=" mt-2 border rounded-md  aspect-video bg-white shadow-sm   flex justify-center  flex-col items-center  ">
             <div
               className=" w-40 aspect-square rounded-full m-2 border-[1.5rem]
             flex flex-col items-center justify-center
@@ -177,7 +178,7 @@ function SideNavbar() {
 function Header() {
   return (
     <div className=" bg-gray-100 border-b border-b-slate-300 px-3 py-2 flex justify-between items-center">
-      <Airplay className="p-2 " size={40} />
+      <Video className="p-1 text-blue-950 " size={40} />
       <div className="flex gap-2">
         <button className="bg-purple-500 px-3 py-1 rounded-md text-white">
           Create
