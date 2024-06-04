@@ -2,7 +2,7 @@ import {
   Airplay,
   BarChartBig,
   Bird,
-  ExternalLink  ,
+  ExternalLink,
   FileVideo,
   Grid2X2,
   HomeIcon,
@@ -37,49 +37,53 @@ function RenderContent() {
         {/* header section  */}
 
         <div className="col-span-1 p-2">
-          <label className="text-sm font-semibold text-slate-400 ">
-            Card Title
-          </label>
+          <label className=" font-semibold text-black ">Quick create</label>
           <br />
-          <div className="border rounded-md flex flex-col justify-between bg-white shadow-sm  aspect-video p-4">
+          <div className="border rounded-md flex flex-col justify-between bg-white shadow-sm  aspect-video p-4 ">
             <LabeledInput
               label={"Generate video from any URL (Ex.Amazon)"}
               placeholder={"https://www.amazon.com"}
             />
+            <hr className="h-0.4 bg-black border-dashed" />
+            <div>
+              <span className="font-semibold text-black text-lg">Or</span>
 
-            <span className="font-semibold text-black text-lg">Or</span>
-            <br />
-            <div className=" flex gap-4 justify-between">
-              <button className="outline-violet-700 w-full border-violet-700 border-2 px-2 py-1 rounded-md text-violet-900 font-semibold bg-violet-300">
-                Create from scratch
-              </button>
-              <button className="outline-violet-700 w-full border-violet-700 border-2 px-2 py-1 rounded-md text-violet-900 font-semibold bg-violet-300">
-                Create from template
-              </button>
+              <div className=" flex gap-4 justify-between mt-2">
+                <button className="outline-violet-700 w-full border-violet-700 border-2 px-2 py-1 rounded-md text-violet-900 font-semibold bg-violet-300">
+                  Create from scratch
+                </button>
+                <button className="outline-violet-700 w-full border-violet-700 border-2 px-2 py-1 rounded-md text-violet-900 font-semibold bg-violet-300">
+                  Create from template
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
         {/* card 2  */}
         <div className="col-span-1 p-2 ">
-          <label className="text-sm font-semibold text-slate-400 flex gap-2 ">
+          <label className=" font-semibold text-black flex gap-2 items-center">
             Your Gallery <ExternalLink size={15} />
           </label>
 
           <div className="border rounded-md  flex flex-col justify-center gap-2  aspect-video   bg-white shadow-sm  p-4 flex items-center flex-col  ">
             <Bird size={60} className="text-slate-400" />
-            <span className="text-center text-gray-400">No Video at <br/> Create one today</span>
+            <span className="text-center text-gray-400">
+              No Video at <br /> Create one today
+            </span>
           </div>
         </div>
 
         {/* card 3  */}
 
         <div className="col-span-1 p-2 ">
-          <label className="text-sm font-semibold text-slate-400 flex gap-2 ">Usage <ExternalLink size={15}/></label>
-        
+          <label className=" font-semibold text-black flex gap-2 items-center ">
+            Usage <ExternalLink size={15} />
+          </label>
+
           <div className="border rounded-md  aspect-video bg-white shadow-sm   flex justify-center  flex-col items-center  ">
             <div
-              className=" w-40 aspect-square rounded-full m-6 border-[1.5rem]
+              className=" w-40 aspect-square rounded-full m-2 border-[1.5rem]
             flex flex-col items-center justify-center
              border-sky-400 "
             >
@@ -87,7 +91,7 @@ function RenderContent() {
               <span className="text-lg font-bold">2,000</span>
             </div>
 
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center mt-2">
               <span className="w-4 h-4  bg-sky-500" />
               <p>
                 Credits left <span className="font-bold ">100%</span>
@@ -99,18 +103,18 @@ function RenderContent() {
 
       {/* template  */}
       <div className="w-full">
-        <h3 className="font-semibold flex gap-2 my-3  text-slate-600">
+        <h3 className="font-semibold flex gap-2 my-3 items-center text-black">
           Templates <ExternalLink size={15} />
         </h3>
         <div className="border rounded-md bg-white p-4 ">
           {/* search bar  */}
           <div className="flex justify-between items-center flex-col md:flex-row">
-            <div className="border w-min rounded-md  px-2 py-1 flex gap-2 ">
+            <div className="border w-min rounded-md  px-2 py-1 flex gap-2 items-center ">
               <input
                 className="font-semibold outline-none "
                 placeholder="Search here"
               />
-              <Search size={18} className="text-slate-500"/>
+              <Search size={18} className="text-slate-500" />
             </div>
             <div className=" flex gap-2 flex-col md:flex-row lg:flex-row items-center mt-2">
               <div className="border w-min rounded-md   px-2 py-1 flex gap-2 ">
@@ -135,7 +139,10 @@ function RenderContent() {
           <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4">
             {[1, 2, 3, 4, 5, 67, 8, 9, 5, 5, 2, 2, 6, , 22, 2, 2, 5, 5].map(
               (data) => (
-                <div key={data} className=" rounded-md col-span-1 hover:scale-95 hover:transition-transform">
+                <div
+                  key={data}
+                  className=" rounded-md col-span-1 hover:scale-95 hover:transition-transform"
+                >
                   <Image
                     src={
                       "https://images.unsplash.com/photo-1712026461359-b7ca4f236edd?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
