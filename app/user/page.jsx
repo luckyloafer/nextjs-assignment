@@ -28,7 +28,7 @@ const UserPage = () => {
     }
 
     const handleKeyDown = (event) => {
-      if (event.ctrlKey && event.key === 'k') {
+      if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
         event.preventDefault();
         handleOpen();
       }
